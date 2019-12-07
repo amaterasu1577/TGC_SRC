@@ -1,2 +1,6 @@
 ---
 # vars file for role_siebel
+certificate:
+  commonName: "awx"
+  subjectAlternativeNames: [ "awx", "awx.local"]
+  passphrase: {{ privatekey.passphrase }}

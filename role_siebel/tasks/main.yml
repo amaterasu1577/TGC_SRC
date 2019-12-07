@@ -1,2 +1,4 @@
 ---
 # tasks file for role_siebel
+- name: Include checks
+  include: checks.yml
