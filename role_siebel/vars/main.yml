@@ -10,5 +10,6 @@ privatekey:
 certificate:
   commonName: "awx"
   subjectAlternativeNames: [ "awx", "awx.local"]
+  countryName: "FR"
   passphrase: "{{ privatekey.passphrase }}"
   directory: "{{ siebel.home }}/certs"

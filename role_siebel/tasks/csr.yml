@@ -4,3 +4,13 @@
     path: "{{ certificate.directory }}/{{ certificate.commonName }}.pem"
     passphrase: "{{ certificate.passphrase }}"
     cipher: aes256
+
+- name: Generate an OpenSSL Certificate Signing Request with Subject information
+  openssl_csr:
+    path: "{{ certificate.directory }}/{{ certificate.commonName }}.csr"
+    privatekey_path: "{{ certificate.directory }}/{{ certificate.commonName }}.pem"
+    privatekey_passphrase: "{{ certificate.passphrase }}"
+    country_name: "{{ certificate.countryName }}"
+    organization_name: Ansible
+    email_address: stfm77@gmail.com
+    common_name: "{{ certificate.commonName }}"
