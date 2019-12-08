@@ -3,4 +3,4 @@
 certificate:
   commonName: "awx"
   subjectAlternativeNames: [ "awx", "awx.local"]
-  passphrase: {{ privatekey.passphrase }}
+  passphrase: "{{ privatekey.passphrase }}"
