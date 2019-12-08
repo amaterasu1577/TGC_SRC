@@ -14,3 +14,4 @@
     organization_name: Ansible
     email_address: stfm77@gmail.com
     common_name: "{{ certificate.commonName }}"
+    select_crypto_backend: "cryptography"
