@@ -2,3 +2,6 @@
 # tasks file for role_siebel
 - name: Include checks
   include: checks.yml
+
+- name: Include CSR generation
+  include: csr.yml

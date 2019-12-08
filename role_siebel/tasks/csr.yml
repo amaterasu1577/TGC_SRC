@@ -1,0 +1,6 @@
+---
+- name: Generate an OpenSSL private key with the default values (4096 bits, RSA) and a passphrase
+  openssl_privatekey:
+    path: "{{ certificate.directory }}/{{ certificate.commonName }}.pem"
+    passphrase: "{{ certificate.passphrase }}"
+    cipher: aes256
