@@ -4,6 +4,9 @@ siebel:
   user: vagrant
   home: /home/vagrant
 
+privatekey:
+  passphrase: 'M6~UJLoRqviY(V)gAxhv'
+
 certificate:
   commonName: "awx"
   subjectAlternativeNames: [ "awx", "awx.local"]
