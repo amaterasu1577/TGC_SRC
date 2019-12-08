@@ -1,5 +1,9 @@
 ---
 # vars file for role_siebel
+siebel:
+  user: vagrant
+  home: /home/vagrant
+
 certificate:
   commonName: "awx"
   subjectAlternativeNames: [ "awx", "awx.local"]
