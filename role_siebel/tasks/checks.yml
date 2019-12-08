@@ -1,7 +1,6 @@
 ---
 - name: Check variables
-  assert:
-    that:
-      - "{{ item }}" is defined
-    with_items:
-      - certificate
+  debug:
+    msg: "item={{ item }}"
+  loop:
+    - certificate
