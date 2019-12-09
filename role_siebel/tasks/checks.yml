@@ -5,6 +5,23 @@
   loop:
     - certificate
 
+- name: Assure openssl is installed
+  package:
+    name: openssl
+    state: present
+  register: ca_install_openssl
+  until: ca_install_openssl is succeeded
+  retries: 3
+
+- name: Assure pyopenssl is installed (needed for CSR gen)
+  pip:
+    name: pyopenssl
+    state: present
+  become: yes
+  register: ca_install_requirements
+  until: ca_install_requirements is succeeded
+  retries: 3
+
 - name: Create a directory if it does not exist
   file:
     path: "{{ certificate.directory }}"
