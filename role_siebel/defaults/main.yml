@@ -1,0 +1,9 @@
+---
+# Vars for pip installation
+pip_dir_source: /usr/local/src
+pip_version: 9.0.1
+
+# Vars for Siebel
+siebel:
+  user: vagrant
+  home: /home/vagrant

@@ -14,3 +14,12 @@
     organization_name: Ansible
     email_address: stfm77@gmail.com
     common_name: "{{ certificate.commonName }}"
+
+- name: Get information on the CSR
+  openssl_csr_info:
+    path: "{{ certificate.directory }}/{{ certificate.commonName }}.csr"
+  register: result
+
+- name: Check result
+  debug:
+    var: result
